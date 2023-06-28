@@ -14,7 +14,7 @@ function App() {
     },
     {
       text: 'Déploiement mon premier projet',
-      completed: true,
+      completed: false,
     },
     {
       text: 'Projet',
