@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ListItem } from './components/ListItem';
 import { TaskField } from './components/TaskField';
 
 function App() {
-  const [tasks, setTasks] = React.useState([
+  const [tasks, setTasks] = useState([
     {
-      text: 'Изучить ReactJS',
+      text: 'Apprendre ReactJS',
+      completed: false,
+    },
+    {
+      text: 'Trouver mon alternance!',
       completed: true,
     },
     {
-      text: 'Разработать ToDo на ReactJS',
-      completed: false,
+      text: 'Déploiement mon premier projet',
+      completed: true,
     },
-  ]);
+  ])
 
   const onToggleCompleted = (index) => {
     setTasks((prevTasks) =>
@@ -44,7 +48,7 @@ function App() {
   return (
     <div className="todo">
       <div className="todo__header">
-        <h4>Список задач</h4>
+        <h4>Liste de tâches</h4>
       </div>
       <TaskField onAddTask={onAddTask} />
       <div className="todo__list">
