@@ -16,6 +16,10 @@ function App() {
       text: 'Déploiement mon premier projet',
       completed: true,
     },
+    {
+      text: 'Projet',
+      completed: false,
+    },
   ])
 
   const onToggleCompleted = (index) => {
